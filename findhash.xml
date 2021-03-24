@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- 依赖于Frida的批量Hook验证功能，应收尽收，放宽搜索标准 -->
+<pattern>
+    <!--    hash general padding-->
+    <p t="padding used in hashing algorithms (0x80 0 ... 0) [32.64]">80000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
+
+    <!--    md5 constants and k table -->
+    <p t="MD5 / SHA1 / SHA0 / RIPEMD-160Initial Constants value [32.16]">01234567775432100223456776543210</p>
+    <p t="MD5 K table [32.16]">78A46AD756B7C7E8DB702024EECEBDC1</p>
+
+    <!--    sha1 sha0 constants and k table-->
+    <p t="SHA1 / SHA0 / RIPEMD-160 Initial Constants value [32.20]">0123456789ABCDEFFEDCBA9876543210F0E1D2C3</p>
+    <p t="SHA1 K table [32.16]">9979825AA1EBD96EDCBC1B8FD6C162CA</p>
+
+    <!--    sha224-->
+    <p t="SHA224 Initial Constants value [32.32]">D89E05C107D57C3617DD703039590EF7310BC0FF11155868A78FF964A44FFABE</p>
+
+    <!--    sha256-->
+    <p t="SHA256 Initial Constants value [32.16]">67E6096A85AE67BB72F36E3C3AF54FA5</p>
+    <p t="SHA256 / SHA224 K tabke [32.16]">982F8A4291443771CFFBC0B5A5DBB5E9</p>
+
+    <!--    sha384-->
+    <p t="SHA384 Initial Constants value [64.16]">D89E05C15D9DBBCB07D57C362A299A62</p>
+
+    <!--    sha512-->
+    <p t="SHA512 Initial Constants value [64.16]">08C9BCF367E6096A3BA7CA8485AE67BB</p>
+    <p t="SHA512 Initial Constants value [64.16]">08C9BCF33BA7CA842BF894FEF1361D5F</p>
+    <p t="SHA512 / SHA384 K table [64.16]">22AE28D7982F8A42CD65EF2391443771</p>
+
+
+</pattern>
