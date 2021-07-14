@@ -26,8 +26,11 @@ def chunks(l, n):
 # 获取SO文件名和路径
 def getSoPathAndName():
     fullpath = ida_nalt.get_input_file_path()
-    filepath,filename = os.path.split(fullpath)
-    return filepath,filename
+    if fullpath:
+        filepath, filename = os.path.split(fullpath)
+        return filepath, filename
+    else:
+        return None, None
 
 so_path, so_name = getSoPathAndName()
 
